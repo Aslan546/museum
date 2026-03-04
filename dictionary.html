@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Бринзи | Словник</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Музей Бринзи</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Історія</a></li>
+                    <li><a href="dictionary.html" class="active">Словник</a></li>
+                    <li><a href="quiz.html">Тест</a></li>
+                    <li><a href="games.html">Ігри</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="dictionary" class="dictionary-section">
+            <div class="container">
+                <h2 class="section-title">Словник Гуцульських Діалектизмів</h2>
+                <p class="section-subtitle">Відгадайте значення слова, щоб відкрити картку</p>
+                
+                <div class="quiz-container" id="quiz-container">
+                    <div class="question-card" id="question-card">
+                        <div class="question-header">
+                            <span id="question-number">Питання 1/5</span>
+                        </div>
+                        <h3 id="question-text">Що таке "Кошара"?</h3>
+                        <div class="options-grid" id="options">
+                            <!-- Options will be injected by JS -->
+                        </div>
+                    </div>
+
+                    <div class="flashcards-grid" id="flashcards-display" style="display: none;">
+                        <!-- Correctly guessed cards will appear here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Музей гуцульської бриндзі. Рахів.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

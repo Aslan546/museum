@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Бринзи | Хто ти?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Музей Бринзи</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Історія</a></li>
+                    <li><a href="dictionary.html">Словник</a></li>
+                    <li><a href="quiz.html" class="active">Тест</a></li>
+                    <li><a href="games.html">Ігри</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="personality-quiz" class="personality-section">
+            <div class="container">
+                <h2 class="section-title">Хто ти на полонині?</h2>
+                <div id="p-quiz-box" class="p-quiz-box centered-content">
+                    <p>Пройдіть швидкий тест, щоб дізнатися свою роль у вівчарському житті.</p>
+                    <button class="btn" onclick="startPersonalityQuiz()">Почати тест</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Музей гуцульської бриндзі. Рахів.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

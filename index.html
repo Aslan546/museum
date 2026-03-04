@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей гуцульської бриндзі | Головна</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Музей Бринзи</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Історія</a></li>
+                    <li><a href="dictionary.html">Словник</a></li>
+                    <li><a href="quiz.html">Тест</a></li>
+                    <li><a href="games.html">Ігри</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Музей гуцульської бриндзі</h1>
+                <p>Зануртеся в атмосферу карпатської полонини та дізнайтеся секрети "Білого Золота"</p>
+                <a href="#story" class="btn">Почати подорож</a>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <section id="story" class="story-section">
+            <div class="container">
+                <h2 class="section-title">Симфонія полонини</h2>
+                
+                <div class="story-card" data-step="1">
+                    <div class="story-text">
+                        <h3>Етап 1: Повернення</h3>
+                        <p>Вівчарі та собаки-вівчарки заганяють величезну отару овець з гірських схилів у спеціальну дерев'яну загорожу — кошару. Атмосфера наповнена звуками металевих дзвіночків (боталеїв) та вигуками чабанів.</p>
+                    </div>
+                    <div class="story-visual">
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1pgFzA_mrihiav93EVzEuqT29MJnthRlN/preview" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card reverse" data-step="2">
+                    <div class="story-text">
+                        <h3>Етап 2: Струнка</h3>
+                        <p>Процес доїння під дерев'яним накриттям (стрункою) під час дощу. Вівчарі сидять пліч-о-пліч, доять овець у дійниці, спілкуються та зливають молоко у великі дерев'яні діжки (путери).</p>
+                    </div>
+                    <div class="story-visual">
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1HxHKxqlleNXu2y7OkGOyZdj2ivCHKBLh/preview" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card" data-step="3">
+                    <div class="story-text">
+                        <h3>Етап 3: Ватра</h3>
+                        <p>Дійство всередині задимленої колиби біля відкритого вогню. Ватаг та помічники розбивають сирний згусток колотівкою, відділяють жентицю і варять сир у мідному казані.</p>
+                    </div>
+                    <div class="story-visual">
+                        <div class="video-container">
+                            <iframe src="https://drive.google.com/file/d/1NL6jvB8dlPQCdK0tps834GUh_SJij016/preview" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Vatra Section -->
+        <section id="vatra" class="vatra-section">
+            <div class="container">
+                <h2 class="section-title" style="color: #ff4500;">Віртуальна Ватра</h2>
+                <p class="section-subtitle">Підкинь поліно у вогонь — залиш свій відгук</p>
+                
+                <div class="vatra-container">
+                    <canvas id="fireCanvas"></canvas>
+                    
+                    <div class="feedback-ui" id="feedback-ui">
+                        <textarea id="feedback-text" placeholder="Напишіть ваші враження..."></textarea>
+                        <button class="btn btn-fire" onclick="submitFeedback()">Підкинути поліно</button>
+                    </div>
+
+                    <div class="donation-links" id="donation-links" style="display: none;">
+                        <h3>Дякуємо! Ватра палає яскравіше!</h3>
+                        <p>Ваше слово зігріває нас.</p>
+                        <div class="links-row">
+                            <a href="https://maps.app.goo.gl/iQyZb56kDnLXNEdZ8" target="_blank" class="btn-link google">Google Maps</a>
+                            <a href="https://patreon.com" target="_blank" class="btn-link patreon">Patreon</a>
+                            <a href="https://buymeacoffee.com" target="_blank" class="btn-link coffee">Buy Me a Coffee</a>
+                        </div>
+                        <button class="btn-text" onclick="resetVatra()">Написати ще</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Музей гуцульської бриндзі. Рахів.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

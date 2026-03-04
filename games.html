@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музей Бринзи | Ігровий зал</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Музей Бринзи</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Історія</a></li>
+                    <li><a href="dictionary.html">Словник</a></li>
+                    <li><a href="quiz.html">Тест</a></li>
+                    <li><a href="games.html" class="active">Ігри</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="games-section">
+            <div class="container">
+                <h2 class="section-title">Карпатські Розваги</h2>
+                
+                <div id="game-menu" class="game-menu">
+                    <div class="game-card" onclick="showGame('flock')">
+                        <div class="game-icon">🐕</div>
+                        <h3>Вартовий Отари</h3>
+                        <p>Стратегія: Зажени овець у кошару, керуючи вірним псом.</p>
+                        <span class="btn-small">Грати</span>
+                    </div>
+                    <div class="game-card" onclick="showGame('jumper')">
+                        <div class="game-icon">🐏</div>
+                        <h3>Вище Гір</h3>
+                        <p>Аркада: Допоможи вівці піднятися на найвищу вершину Карпат.</p>
+                        <span class="btn-small">Грати</span>
+                    </div>
+                </div>
+
+                <!-- Game: Flock -->
+                <div id="game-flock" class="game-wrapper" style="display: none;">
+                    <div class="game-header">
+                        <button class="btn-back" onclick="showMenu()">← Назад</button>
+                        <div class="game-stats-hud">
+                            <span>Рівень: <span id="game-level">1</span></span>
+                            <span>Вівці: <span id="score">0</span>/20</span>
+                        </div>
+                    </div>
+                    <div class="game-container" id="game-container-flock">
+                        <canvas id="gameCanvas"></canvas>
+                        <div id="flock-overlay" class="game-overlay">
+                            <button class="btn" onclick="initGame('flock')">Почати гру</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game: Sheep Jumper -->
+                <div id="game-jumper" class="game-wrapper" style="display: none;">
+                    <div class="game-header">
+                        <button class="btn-back" onclick="showMenu()">← Назад</button>
+                        <div class="game-stats-hud">
+                            <span>Висота: <span id="jump-score">0</span> м</span>
+                            <span>Найкраще: <span id="jump-highscore">0</span> м</span>
+                        </div>
+                    </div>
+                    <div class="game-container jumper-bg" id="game-container-jumper">
+                        <canvas id="jumperCanvas"></canvas>
+                        <div id="jumper-overlay" class="game-overlay">
+                            <h3>Стрибай по хмаринках та скелях!</h3>
+                            <p>Керуй мишкою або стрілками (← →)</p>
+                            <button class="btn" onclick="startJumperGame()">Почати сходження</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Leaderboard -->
+                    <div class="leaderboard">
+                        <h4>Таблиця лідерів (м)</h4>
+                        <ol id="highscores-list">
+                            <!-- Injected by JS -->
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Музей гуцульської бриндзі. Рахів.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
